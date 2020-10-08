@@ -1,7 +1,7 @@
-
 import React from 'react';
 
 import Category from '../../components/Category';
+import Section from '../../components/Section';
 
 import { Container, Bar, Header, Title, SubTitle } from './styles';
 
@@ -24,6 +24,7 @@ const Home: React.FC = () => {
       </Header>
 
       <Category />
+      <Section title="Heróis" />
     </Container>
   );
 };
