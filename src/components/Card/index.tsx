@@ -12,9 +12,9 @@ interface ICharacter {
 const Card: React.FC<ICharacter> = ({ name, alterEgo, imagePath }) => {
   return (
     <Container>
-      <Img source={{ uri: `${API_URL}/${imagePath}`}} />
-        <AlterEgo>{alterEgo}</AlterEgo>
-        <Name>{name}</Name>
+      <Img source={{ uri: `${API_URL}/${imagePath}` }} />
+      <AlterEgo>{alterEgo}</AlterEgo>
+      <Name>{name}</Name>
     </Container>
   );
 };
