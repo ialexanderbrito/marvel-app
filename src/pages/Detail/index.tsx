@@ -16,7 +16,18 @@ import {
   CharacteristicsText,
   BiographyContainer,
   BiographyText,
+  Abilities,
+  AbilitiesTitle,
+  AbilitiesContent,
+  AbilitiesText,
+  MovieContainer,
+  MovieTitle,
+  MovieList,
+  MovieContent,
+  MovieImg,
 } from './styles';
+
+import SkillBar from '../../components/SkillBar';
 
 import Back from '../../assets/icons/back.svg';
 import Age from '../../assets/icons/age.svg';
@@ -26,6 +37,7 @@ import Universe from '../../assets/icons/universe.svg';
 
 interface IParams {
   character: {
+    id: number;
     name: string;
     alterEgo: string;
     imagePath: string;
@@ -64,11 +76,10 @@ const Detail: React.FC = () => {
     <>
       <ImgBackground source={{ uri: `${API_URL}/${character.imagePath}` }}>
         <Gradient colors={['transparent', '#000']}></Gradient>
-        <Container>
-          <ToBack onPress={() => navigation.goBack()}>
-            <Back />
-          </ToBack>
-
+        <ToBack onPress={() => navigation.goBack()}>
+          <Back />
+        </ToBack>
+        <Container showsVerticalScrollIndicator={false}>
           <HeroContainer>
             <AlterEgo>{character.alterEgo}</AlterEgo>
             <Name>{character.name}</Name>
@@ -109,6 +120,47 @@ const Detail: React.FC = () => {
           <BiographyContainer>
             <BiographyText>{character.biography}</BiographyText>
           </BiographyContainer>
+
+          <Abilities>
+            <AbilitiesTitle>Habilidades</AbilitiesTitle>
+            <AbilitiesContent>
+              <AbilitiesText>Força</AbilitiesText>
+              <SkillBar value={character.abilities.force} />
+            </AbilitiesContent>
+
+            <AbilitiesContent>
+              <AbilitiesText>Inteligência</AbilitiesText>
+              <SkillBar value={character.abilities.intelligence} />
+            </AbilitiesContent>
+
+            <AbilitiesContent>
+              <AbilitiesText>Agilidade</AbilitiesText>
+              <SkillBar value={character.abilities.agility} />
+            </AbilitiesContent>
+
+            <AbilitiesContent>
+              <AbilitiesText>Resistência</AbilitiesText>
+              <SkillBar value={character.abilities.endurance} />
+            </AbilitiesContent>
+
+            <AbilitiesContent>
+              <AbilitiesText>Velocidade</AbilitiesText>
+              <SkillBar value={character.abilities.velocity} />
+            </AbilitiesContent>
+          </Abilities>
+
+          <MovieContainer>
+            <MovieTitle>Filmes</MovieTitle>
+            <MovieList horizontal showsHorizontalScrollIndicator={false}>
+              {character.movies.map((movie) => {
+                return (
+                  <MovieContent key={character.id}>
+                    <MovieImg source={{ uri: `${API_URL}/${movie}` }} />
+                  </MovieContent>
+                );
+              })}
+            </MovieList>
+          </MovieContainer>
         </Container>
       </ImgBackground>
     </>
