@@ -39,7 +39,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper showsVerticalScrollIndicator={false}>
       <Container>
         <Bar>
           <Menu />
