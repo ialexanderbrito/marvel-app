@@ -30,6 +30,6 @@ export const SubTitle = styled.Text`
   color: #313140;
 `;
 
-export const List = styled.ScrollView`
+export const List = styled.ScrollView``;
 
-`;
+export const Button = styled.TouchableOpacity``;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import Category from '../../components/Category';
 import Section from '../../components/Section';
@@ -14,6 +15,7 @@ import {
   Title,
   SubTitle,
   List,
+  Button,
 } from './styles';
 
 import Menu from '../../assets/icons/menu.svg';
@@ -21,6 +23,7 @@ import Logo from '../../assets/icons/marvel.svg';
 import Search from '../../assets/icons/search.svg';
 
 interface ICharacter {
+  id: number;
   name: string;
   category: string;
   alterEgo: string;
@@ -28,6 +31,7 @@ interface ICharacter {
 }
 
 const Home: React.FC = () => {
+  const navigation = useNavigation();
   const [characters, setCharacters] = useState<ICharacter[]>([]);
 
   useEffect(() => {
@@ -56,12 +60,18 @@ const Home: React.FC = () => {
             .filter((character) => character.category === 'heroes')
             .map((character) => {
               return (
-                <Card
-                  key={character.name}
-                  name={character.name}
-                  alterEgo={character.alterEgo}
-                  imagePath={character.imagePath}
-                />
+                <Button
+                  key={String(character.id)}
+                  onPress={() => navigation.navigate('Detail', { character })}
+                  activeOpacity={0.6}
+                >
+                  <Card
+                    key={character.id}
+                    name={character.name}
+                    alterEgo={character.alterEgo}
+                    imagePath={character.imagePath}
+                  />
+                </Button>
               );
             })}
         </List>
@@ -73,12 +83,18 @@ const Home: React.FC = () => {
             .filter((character) => character.category === 'villains')
             .map((character) => {
               return (
-                <Card
-                  key={character.name}
-                  name={character.name}
-                  alterEgo={character.alterEgo}
-                  imagePath={character.imagePath}
-                />
+                <Button
+                  key={String(character.id)}
+                  onPress={() => navigation.navigate('Detail', { character })}
+                  activeOpacity={0.6}
+                >
+                  <Card
+                    key={character.id}
+                    name={character.name}
+                    alterEgo={character.alterEgo}
+                    imagePath={character.imagePath}
+                  />
+                </Button>
               );
             })}
         </List>
@@ -90,12 +106,18 @@ const Home: React.FC = () => {
             .filter((character) => character.category === 'antiHeroes')
             .map((character) => {
               return (
-                <Card
-                  key={character.name}
-                  name={character.name}
-                  alterEgo={character.alterEgo}
-                  imagePath={character.imagePath}
-                />
+                <Button
+                  key={String(character.id)}
+                  onPress={() => navigation.navigate('Detail', { character })}
+                  activeOpacity={0.6}
+                >
+                  <Card
+                    key={character.id}
+                    name={character.name}
+                    alterEgo={character.alterEgo}
+                    imagePath={character.imagePath}
+                  />
+                </Button>
               );
             })}
         </List>
@@ -107,12 +129,18 @@ const Home: React.FC = () => {
             .filter((character) => character.category === 'humans')
             .map((character) => {
               return (
-                <Card
-                  key={character.name}
-                  name={character.name}
-                  alterEgo={character.alterEgo}
-                  imagePath={character.imagePath}
-                />
+                <Button
+                  key={String(character.id)}
+                  onPress={() => navigation.navigate('Detail', { character })}
+                  activeOpacity={0.6}
+                >
+                  <Card
+                    key={character.id}
+                    name={character.name}
+                    alterEgo={character.alterEgo}
+                    imagePath={character.imagePath}
+                  />
+                </Button>
               );
             })}
         </List>
