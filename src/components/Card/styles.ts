@@ -10,7 +10,7 @@ export const Container = styled.View`
 
   shadow-offset: 0px 2px;
   shadow-opacity: 0.23;
-  shadow-radius: 262;
+  shadow-radius: 262px;
   elevation: 4;
 `;
 
