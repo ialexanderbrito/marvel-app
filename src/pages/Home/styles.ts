@@ -1,5 +1,7 @@
 import styled from 'styled-components/native';
-import Constants from 'expo-constants'
+import Constants from 'expo-constants';
+
+export const Wrapper = styled.ScrollView``;
 
 export const Container = styled.View`
   flex: 1;
@@ -26,4 +28,8 @@ export const SubTitle = styled.Text`
   font-family: 'Gilroy_800Heavy';
   font-size: 32px;
   color: #313140;
+`;
+
+export const List = styled.ScrollView`
+
 `;
