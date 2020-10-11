@@ -1,7 +1,9 @@
 {
   "expo": {
-    "name": "marvel-app",
+    "name": "Marvel Heroes",
     "slug": "marvel-app",
+    "privacy": "public",
+    "sdkVersion": "39.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,11 +19,16 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.ialexanderbrito.marvelheroes",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "android": {
+      "package": "com.ialexanderbrito.marvelheroes",
+      "versionCode": 1
     },
+    "description": "\nAplicativo com heróis da Marvel",
+    "githubUrl": "https://github.com/ialexanderbrito/marvel-app",
     "packagerOpts": {
       "config": "metro.config.js",
       "sourceExts": [
