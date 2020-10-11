@@ -1,7 +1,9 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import {AppLoading} from 'expo';
-import {useFonts} from '@use-expo/font';
+import { AppLoading } from 'expo';
+import { useFonts } from '@use-expo/font';
+
+import { ThemeSwitchProvider } from './src/context/SwitchTheme';
 
 import Routes from './src/routes';
 
@@ -20,13 +22,15 @@ export default function App() {
     Gilroy_800Heavy,
   });
 
-  if (!fontsLoaded){
-    return <AppLoading />
+  if (!fontsLoaded) {
+    return <AppLoading />;
   }
   return (
     <>
-    <StatusBar style="dark" backgroundColor="transparent" translucent />
-    <Routes />
+      <ThemeSwitchProvider>
+        <Routes />
+        <StatusBar style="dark" backgroundColor="transparent" translucent />
+      </ThemeSwitchProvider>
     </>
   );
 }

@@ -4,23 +4,21 @@ import { useNavigation } from '@react-navigation/native';
 import Category from '../../components/Category';
 import Section from '../../components/Section';
 import Card from '../../components/Card';
+import Header from '../../components/Header';
+
+import { useSwitchTheme } from '../../context/SwitchTheme';
 
 import api from '../../services/api';
 
 import {
   Wrapper,
   Container,
-  Bar,
-  Header,
+  Heading,
   Title,
   SubTitle,
   List,
   Button,
 } from './styles';
-
-import Menu from '../../assets/icons/menu.svg';
-import Logo from '../../assets/icons/marvel.svg';
-import Search from '../../assets/icons/search.svg';
 
 interface ICharacter {
   id: number;
@@ -31,6 +29,8 @@ interface ICharacter {
 }
 
 const Home: React.FC = () => {
+  const { colors } = useSwitchTheme();
+
   const navigation = useNavigation();
   const [characters, setCharacters] = useState<ICharacter[]>([]);
 
@@ -41,16 +41,11 @@ const Home: React.FC = () => {
   return (
     <Wrapper showsVerticalScrollIndicator={false}>
       <Container>
-        <Bar>
-          <Menu />
-          <Logo />
-          <Search />
-        </Bar>
-
-        <Header>
-          <Title>Bem vindo ao Marvel Heroes</Title>
-          <SubTitle>Escolha seu personagem</SubTitle>
-        </Header>
+        <Header />
+        <Heading>
+          <Title colors={colors}>Bem vindo ao Marvel Heroes</Title>
+          <SubTitle colors={colors}>Escolha seu personagem</SubTitle>
+        </Heading>
 
         <Category />
         <Section title="Heróis" />

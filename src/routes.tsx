@@ -4,13 +4,18 @@ import {
   createStackNavigator,
   CardStyleInterpolators,
 } from '@react-navigation/stack';
+import { useSwitchTheme } from '../src/context/SwitchTheme';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
 
+import colors from './styles/colors';
+
 const AppStack = createStackNavigator();
 
-const Routes = () => {
+const Routes: React.FC = () => {
+  const { colors } = useSwitchTheme();
+
   return (
     <NavigationContainer>
       <AppStack.Navigator
@@ -21,7 +26,7 @@ const Routes = () => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
           headerShown: false,
           cardStyle: {
-            backgroundColor: '#f0f0f5',
+            backgroundColor: colors.background,
           },
         }}
       >
