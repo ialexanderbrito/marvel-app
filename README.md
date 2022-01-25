@@ -1,115 +1,147 @@
 <h1 align="center">
-  <img src=".github/logo.svg" width="180px" />
-   ⠀⠀
-    <a align="center" href="https://umpontoseis.com/" target="_blank">
-      <img  src=".github/umpontoseis.png" width="100px" />
-   </a>
+    <a href="https://umpontoseis.com/" target="_blank">
+      <img alt="umpontoseis" title="#umpontoseis" src=".github/umpontoseis-logo.svg" width="250px" />
+    </a>
 </h1>
+
+<h1 align="center">
+    <img alt="marvel" title="#marvel" src=".github/logo.svg" width="250px" />
+</h1>
+
 <h4 align="center">
- <b>👨🏻‍🎤 Marvel Heroes</b>
+  🚀 umpontoseis - Marvel Heroes API
 </h4>
+
 <p align="center">
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/ialexanderbrito/marvel-app?style=flat-square" />
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/ialexanderbrito/marvel-app?style=flat-square" />
-  <img alt="" src="https://img.shields.io/github/repo-size/ialexanderbrito/marvel-app?style=flat-square" />
-  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/ialexanderbrito/marvel-app?style=flat-square" />
-  <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/ialexanderbrito/marvel-app?style=flat-square" />
-  <img alt="Github License" src="https://img.shields.io/github/license/ialexanderbrito/marvel-app?style=flat-square" />
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/WallysonGalvao/umpontoseis-marvel-api">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/WallysonGalvao/umpontoseis-marvel-api">
+  
+  <a href="https://github.com/WallysonGalvao/umpontoseis-marvel-api/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/WallysonGalvao/umpontoseis-marvel-api">
+  </a>
+
+  <a href="https://github.com/WallysonGalvao/umpontoseis-marvel-api/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/WallysonGalvao/umpontoseis-marvel-api">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
+<p align="center">
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Enpoints</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
 <br>
 
-### :rocket: Tecnologias usadas
+## 💻 Projeto
+
+Esse projeto é uma api simples com dados mockados disponibilizados em um .json pela **[umpontoseis](https://umpontoseis.com/)** para o projeto Marvel Heroes.
+
+Marvel Heroes é o segundo projeto da **[umpontoseis](https://umpontoseis.com/)** criado de designers para desenvolvedores. A ideia do aplicativo é apresentar personagens do universo Marvel, em uma interface simples, elegante e com alto padrão.
+
+Você pode utilizar a seguinte URL para conhecer melhor o projeto: [Visualizar](https://www.figma.com/community/file/849367817302905364)
+
+## :rocket: Tecnologias
+
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.io/)
 
-Extras:
+- [Node](https://nodejs.org/)
+- [Express](https://expressjs.com/pt-br/)
+- [imagemin](https://github.com/imagemin/imagemin)
 
-- Main Libs
-  - [Styled Components](https://styled-components.com/)
-  - [Axios](https://github.com/axios/axios)
-  - Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>
+\* Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>
 
-- Estilos
-  - [EditorConfig](https://editorconfig.org/)
-  - [ESLint](https://eslint.org/)
-  - [Prettier](https://prettier.io/)
-
-### 📱 Screen
-
-<h4 align="center">
-<img src=".github/01.png" width="300px" /> <img src=".github/02.png" width="300px" /> 
-<img src=".github/03.png" width="300px" /> <img src=".github/04.png" width="300px" /> 
-</h4>
-
-### 💻 Projeto
-
-Este é o segundo projeto da <b>[umpontoseis](https://umpontoseis.com/)</b> criado de designers para desenvolvedores. A ideia do aplicativo é apresentar personagens do universo Marvel, em uma interface simples, elegante e com alto padrão. 
-
-### ⚙ Como rodar este projeto
-
-### Pré-requisitos
-
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-
-<b>[Git](https://git-scm.com)</b>
-
-<b>[Expo](https://expo.io)</b>
-
-E também será preciso um editor, eu indico o <b>[VSCode](https://code.visualstudio.com/)</b>
-
-### 🧭 Rodando o Projeto
+## :notebook: Executando
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/ialexanderbrito/marvel-app
+$ git clone https://github.com/WallysonGalvao/umpontoseis-marvel-api.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd marvel-app
+$ cd umpontoseis-marvel-api
 
 # Instale as dependências
-$ npm install ou yarn
+$ yarn install
 
 # Execute a aplicação
-$ expo start ou yarn start
+$ yarn start
+
+# Acessar http://localhost:3333
 ```
 
-### :recycle: Como contribuir
+## :orange_book: Endpoints
 
-- Fork esse repositório;
-- Crie uma branch com a sua feature: `git checkout -b my-feature`
-- Commit suas mudanças: `git commit -m 'feat: My new feature'`
-- Push a sua branch: `git push origin my-feature`
+- **`/`**: Lista todos os heróis, vilões, anti-vilões e humanos.
 
-Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+```json
+[
+  {
+    "id": 1,
+    "category": "heroes",
+    "name": "Homem Aranha",
+    "alterEgo": "Peter Parker",
+    "imagePath": "chars/spider-man.png",
+    "biography": "Em Forest Hills, Queens, Nova York, o estudante de ensino médio, Peter Parker, é um cientista orfão que vive com seu tio Ben e tia May. Ele é mordido por uma aranha radioativa em uma exposição científica e adquire a agilidade e a força proporcional de um aracnídeo. Junto com a super força, Parker ganha a capacidade de andar nas paredes e tetos. Através de sua habilidade nativa para a ciência, ele desenvolve um aparelho que o permitir lançar teias artificiais. Inicialmente buscando capitalizar suas novas habilidades, Parker cria um traje e, como Homem Aranha, torna-se uma estrela de televisão.",
+    "caracteristics": {
+      "birth": "1990",
+      "weight": {
+        "value": 78,
+        "unity": "kg"
+      },
+      "height": {
+        "value": 1.8,
+        "unity": "meters"
+      },
+      "universe": "Terra 616"
+    },
+    "abilities": {
+      "force": 70,
+      "intelligence": 65,
+      "agility": 90,
+      "endurance": 60,
+      "velocity": 80
+    },
+    "movies": [
+      "movies/captain-america-3.jpg",
+      "movies/spider-man-homecoming.jpg",
+      "movies/avengers-3.jpg",
+      "movies/avengers-4.jpg",
+      "movies/spider-man-far-from-home.jpg"
+    ]
+  }
+]
+```
 
-### :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-### 📱 Social
-
-Me acompanhe nas minhas redes sociais.
+- **`/chars/<image_name>`**: Mostra a imagem do personagem. Ex. http://localhost:3333/chars/spider-man.png
+  <p>Ex. http://localhost:3333/chars/spider-man.png
 
 <p align="center">
-  
- <a href="https://twitter.com/ialexanderbrito" target="_blank" > 
-     <img alt="Twitter" src="https://img.shields.io/badge/-Twitter-9cf?style=flat-square&logo=Twitter&logoColor=white"></a> 
-  
-  <a href="https://instagram.com/ialexanderbrito" target="_blank" >
-    <img alt="Instagram" src="https://img.shields.io/badge/-Instagram-ff2b8e?style=flat-square&logo=Instagram&logoColor=white"></a> 
-
-  <a href="https://www.linkedin.com/in/ialexanderbrito/" target="_blank" >
-    <img alt="Linkedin" src="https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white"></a>
-    
-  <a href="https://t.me/ialexanderbrito" target="_blank" >
-    <img alt="Telegram" src="https://img.shields.io/badge/-Telegram-blue?style=flat-square&logo=Telegram&logoColor=white"></a>
-  
-  <a href="mailto:ialexanderbrito@gmail.com" target="_blank" >
-    <img alt="Email" src="https://img.shields.io/badge/-Email-c14438?style=flat-square&logo=Gmail&logoColor=white"></a>
-    
+    <img alt="marvel" title="#marvel" src=".github/spider-man.png" width="300px" />
 </p>
+
+- **`/movies/<image_name>`**: Mostra a imagem da capa de um filme.
+   <p>Ex. http://localhost:3333/movies/ant-man.jpg
+</p>
+<p align="center">
+    <img alt="marvel" title="#marvel" src=".github/ant-man.jpg" width="300px" />
+</p>
+
+## :construction: Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-awesome-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My awesome feature"`
+4. Envie as suas alterações: `git push origin my-awesome-feature`
+   > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
 ---
 
-Feito com ❤️ by **Alexander** 🤙🏾
+Feito com horas em frente ao :computer: por [Wallyson Galvão](https://www.linkedin.com/in/wallyson-galvao/)
